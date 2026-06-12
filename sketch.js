@@ -57,7 +57,7 @@ let winner = "";
 function preload() {
   car1Img = loadImage("BlueCar.png");
   car2Img = loadImage("Redcar.png");
-  coinImg = loadImage("coin.jpg");
+  coinImg = loadImage("coin.png");
   bgStart = loadImage("startbg1.jpg");
   road1 = loadImage("street.png");
   road2 = loadImage("street.png");
