@@ -55,8 +55,8 @@ let winner = "";
 
 
 function preload() {
-  car1Img = loadImage("redCorv.webp");
-  car2Img = loadImage("audiOrange.webp");
+  car1Img = loadImage("redCorv-removebg.png");
+  car2Img = loadImage("audiOrange-removebg.png");
   coinImg = loadImage("coin.png");
   bgStart = loadImage("startbg1.jpg");
   road1 = loadImage("street.png");
