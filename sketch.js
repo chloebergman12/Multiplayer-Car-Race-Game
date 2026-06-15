@@ -106,7 +106,7 @@ function draw(){
 function drawStart() {
   image(bgStart, 0, 0, width, height);
   textAlign(CENTER);
-  textSize(40);
+  textSize(37);
   fill("Red");
   text("Multiplayer Car Race Game", 300, 150);
   fill(0, 150, 255);
