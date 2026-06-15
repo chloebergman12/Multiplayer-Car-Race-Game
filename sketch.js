@@ -66,7 +66,7 @@ function preload() {
 
 function setup() {
   createCanvas(600, 600);
-  textFont("Comic Sans MS");
+  textFont("Courier");
   resetCoins();
 }
 
