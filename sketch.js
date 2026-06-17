@@ -36,8 +36,8 @@ let road2Left = -50;
 let road2Right = 400;
 
 // Cars
-let car1 = { x: road1Left + 225, y: 400, speed: 5 }; // BLUE Right
-let car2 = { x: road2Left + 225, y: 400, speed: 5 }; // RED Left
+let car1 = { x: (road1Left + road1Right) / 2 - 50, y: 400, speed: 5 };
+let car2 = { x: (road2Left + road2Right) / 2 - 50, y: 400, speed: 5 };
 
 // Score
 let score1 = 0;
@@ -148,8 +148,8 @@ function runGame() {
   moveCars();
 
   // keep cars inside roads
-  car1.x = constrain(car1.x, road1Left + 10, road1Right - 90);
-  car2.x = constrain(car2.x, road2Left + 10, road2Right - 90);
+  car1.x = constrain(car1.x, road1Left + 10, road1Right - 100);
+  car2.x = constrain(car2.x, road2Left + 10, road2Right - 100);
   drawCars();
   collectCoins();
   checkWinner();
@@ -181,8 +181,8 @@ function moveCars() {
 // Displays cars on the screen
 // Draw cars
 function drawCars() {
-  image(car1Img, car1.x, car1.y, 90, 70);
-  image(car2Img, car2.x, car2.y, 90, 70);
+  image(car1Img, car1.x, car1.y, 100, 80);
+  image(car2Img, car2.x, car2.y, 100, 80);
 }
 
 function collectCoins() {
@@ -234,9 +234,9 @@ function respawnCoin(c) {
 function hit(car, coin) {
   return (
     car.y < coin.y + 30 &&
-    car.y + 55 > coin.y &&
+    car.y + 80 > coin.y &&
     car.x < coin.x + 30 &&
-    car.x + 90 > coin.x
+    car.x + 100 > coin.x
   );
 }
 
@@ -307,9 +307,9 @@ function resetGame() {
   score1 = 0;
   score2 = 0;
   level = 1;
-  goal = 5;
-  car1.x = road1Left + 225;
-  car2.x = road2Left + 225;
+  goal = 10;
+  car1.x = (road1Left + road1Right) / 2 - 50;
+  car2.x = (road2Left + road2Right) / 2 - 50;
   car1.y = 400;
   car2.y = 400;
   resetCoins();
