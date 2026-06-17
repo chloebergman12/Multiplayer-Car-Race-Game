@@ -148,8 +148,8 @@ function runGame() {
   moveCars();
 
   // keep cars inside roads
-  car1.x = constrain(car1.x, road1Left + 10, road1Right - 70);
-  car2.x = constrain(car2.x, road2Left + 10, road2Right - 70);
+  car1.x = constrain(car1.x, road1Left + 10, road1Right - 90);
+  car2.x = constrain(car2.x, road2Left + 10, road2Right - 90);
   drawCars();
   collectCoins();
   checkWinner();
@@ -181,8 +181,8 @@ function moveCars() {
 // Displays cars on the screen
 // Draw cars
 function drawCars() {
-  image(car1Img, car1.x, car1.y, 70, 40);
-  image(car2Img, car2.x, car2.y, 70, 40);
+  image(car1Img, car1.x, car1.y, 90, 55);
+  image(car2Img, car2.x, car2.y, 90, 55);
 }
 
 function collectCoins() {
@@ -234,9 +234,9 @@ function respawnCoin(c) {
 function hit(car, coin) {
   return (
     car.y < coin.y + 30 &&
-    car.y + 45 > coin.y &&
+    car.y + 55 > coin.y &&
     car.x < coin.x + 30 &&
-    car.x + 70 > coin.x
+    car.x + 90 > coin.x
   );
 }
 
