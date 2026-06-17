@@ -181,8 +181,8 @@ function moveCars() {
 // Displays cars on the screen
 // Draw cars
 function drawCars() {
-  image(car1Img, car1.x, car1.y, 90, 55);
-  image(car2Img, car2.x, car2.y, 90, 55);
+  image(car1Img, car1.x, car1.y, 90, 70);
+  image(car2Img, car2.x, car2.y, 90, 70);
 }
 
 function collectCoins() {
